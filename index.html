@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver Visualizer</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <h1>Sudoku Solver Visualizer</h1>
+
+    <div class="controls">
+
+        <div class="control-group">
+            <label>Animation Speed</label>
+            <input
+                type="range"
+                id="speed"
+                min="50"
+                max="1000"
+                value="300">
+        </div>
+
+        <div class="buttons">
+            <button id="solve-btn">Solve</button>
+            <button id="clear-btn">Clear</button>
+            <button id="reset-btn">Reset</button>
+        </div>
+
+    </div>
+
+    <div class="main-content">
+
+        <div class="board-panel">
+
+            <div id="board"></div>
+
+        </div>
+
+        <div class="stats">
+
+            <h2>Statistics</h2>
+
+            <div class="stat">
+                <span>Recursive Calls</span>
+                <span id="calls">0</span>
+            </div>
+
+            <div class="stat">
+                <span>Backtracks</span>
+                <span id="backtracks">0</span>
+            </div>
+
+            <div class="stat">
+                <span>Current Cell</span>
+                <span id="current">-</span>
+            </div>
+
+            <div class="stat">
+                <span>Execution Time</span>
+                <span id="time">0 ms</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
