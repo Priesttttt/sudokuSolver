@@ -1,0 +1,125 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+body{
+    background:#1e1e2f;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.wrapper{
+    width:95%;
+    max-width:1300px;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:30px;
+    font-weight:600;
+}
+
+.controls{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.control-group{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:8px;
+    background:#3b82f6;
+    color:white;
+    cursor:pointer;
+    transition:.2s;
+}
+
+button:hover{
+    background:#2563eb;
+}
+
+.main-content{
+    display:flex;
+    justify-content:center;
+    gap:50px;
+    align-items:flex-start;
+    flex-wrap:wrap;
+}
+
+#board{
+    display:grid;
+    grid-template-columns:repeat(9,60px);
+    grid-template-rows:repeat(9,60px);
+
+    border:3px solid white;
+    background:white;
+}
+
+.cell{
+    width:60px;
+    height:60px;
+
+    border:1px solid #999;
+
+    text-align:center;
+
+    font-size:28px;
+    font-weight:600;
+
+    outline:none;
+}
+
+/* Thick vertical lines */
+
+.cell:nth-child(3n){
+    border-right:3px solid black;
+}
+
+.cell:nth-child(9n){
+    border-right:none;
+}
+
+/* Thick horizontal lines */
+
+.cell:nth-child(n+19):nth-child(-n+27),
+.cell:nth-child(n+46):nth-child(-n+54){
+    border-bottom:3px solid black;
+}
+
+.stats{
+    width:280px;
+    background:#2b2b3f;
+    padding:20px;
+    border-radius:10px;
+}
+
+.stats h2{
+    margin-bottom:20px;
+}
+
+.stat{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:15px;
+}
